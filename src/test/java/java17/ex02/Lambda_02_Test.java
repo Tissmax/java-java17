@@ -29,7 +29,6 @@ public class Lambda_02_Test {
     }
     // end::map[]
 
-
     // tag::test_map_person_to_account[]
     @Test
     public void test_map_person_to_account() throws Exception {
