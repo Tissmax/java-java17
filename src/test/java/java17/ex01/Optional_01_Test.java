@@ -48,9 +48,8 @@ public class Optional_01_Test {
                 .filter(p -> p.getAge() == 75)
                 .findFirst();
         assertThat(optPerson.isPresent(), is(false));
-        optPerson.orElseThrow(NotPresentException::new);
         // TODO si la personne n'existe pas, jeter une exception NotPresentException
         // TODO utiliser la méthode "orElseThrow"
-
+        optPerson.orElseThrow(NotPresentException::new);
     }
 }
