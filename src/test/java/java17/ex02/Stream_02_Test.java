@@ -64,7 +64,10 @@ public class Stream_02_Test {
 		List<Order> orders = new Data().getOrders();
 
 		// TODO Compter le nombre des différents clients associés aux commandes
-		long result = 0L;
+		long result = orders.stream()
+				.map(Order::getCustomer)
+				.distinct()
+				.count();
 
 		assertThat(result, is(2L));
 	}
